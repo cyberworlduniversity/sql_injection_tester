@@ -292,6 +292,9 @@ def test_url_params(url, session):
 
 def scan(url, delay=0.5, output_file=None, allow_private_targets=False):
     """Main scan function."""
+    validate_target_url(url, allow_private=allow_private_targets)
+    if not 0.1 <= delay <= 10:
+        raise ValueError("Delay must be between 0.1 and 10 seconds.")
     session = requests.Session()
     session.headers.update({
         "User-Agent": "Mozilla/5.0 (SQLi-Tester/1.0; Educational Tool)"
