@@ -1,5 +1,15 @@
 # 🧪 SQL Injection Tester
 
+
+## Get this repository
+
+Clone the current project (this repository's canonical GitHub URL), then follow the installation and usage steps below.
+
+```bash
+git clone https://github.com/cyberworlduniversity/sql_injection_tester.git
+cd sql_injection_tester
+```
+
 > **Tool #17 in the Ethical Hacking Toolkit**  
 > By **[hemanathan115](https://github.com/hemanathan115)**
 
@@ -40,7 +50,7 @@ sql_injection_tester/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/hemanathan115/sql_injection_tester.git
+git clone https://github.com/cyberworlduniversity/sql_injection_tester.git
 cd sql_injection_tester
 ```
 
