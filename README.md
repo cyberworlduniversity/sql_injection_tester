@@ -179,3 +179,55 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 | ... | More tools | Coming soon... |
 
 > ⭐ Star this repo if you find it useful!
+
+
+## Repository Quick Start
+
+Clone the canonical repository:
+
+```bash
+git clone https://github.com/cyberworlduniversity/sql_injection_tester.git
+cd sql_injection_tester
+```
+
+### Requirements and installation
+
+- Python 3.10+ is recommended.
+Create an isolated environment and install dependencies:
+
+```bash
+python -m venv .venv
+# Linux/macOS: source .venv/bin/activate
+# Windows PowerShell: .venv\\Scripts\\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+### Run
+
+```bash
+python sql_injection_tester.py
+```
+
+For scripts that expose command-line options, use `python sql_injection_tester.py --help` to inspect the options implemented in this version. Begin with sample or non-sensitive input.
+
+### Validate source syntax
+
+```bash
+python -m compileall -q .
+```
+
+Only test applications and endpoints you own or are explicitly authorized to assess.
+
+### Program flow
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Load input and settings]
+    B --> C{Input valid?}
+    C -- No --> D[Show validation error]
+    C -- Yes --> E[Run sql injection tester checks]
+    E --> F[Evaluate results]
+    F --> G[Display or save report]
+    G --> H[Exit]
+    D --> H
+```
