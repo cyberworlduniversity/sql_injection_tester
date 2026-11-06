@@ -231,3 +231,16 @@ flowchart TD
     G --> H[Exit]
     D --> H
 ```
+
+
+## Target scope and request safeguards
+
+The scanner blocks private, loopback, link-local, and reserved IP targets by default. It refuses cross-origin form actions and does not follow HTTP redirects, which helps prevent a page from making the scanner probe unrelated internal services. Responses are limited to 2 MiB, and form/field/query counts are capped.
+
+For an authorized local lab such as DVWA or WebGoat, explicitly opt in:
+
+```bash
+python sql_injection_tester.py http://127.0.0.1/dvwa --allow-private-targets
+```
+
+Only use this option for systems you own or are explicitly authorized to test.
